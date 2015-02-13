@@ -1,0 +1,19 @@
+{
+  "name": "skelly",
+  "version": "1.0.0",
+  "description": "Basic web project setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jackgringo/skelly.git"
+  },
+  "author": "John Clark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackgringo/skelly/issues"
+  },
+  "homepage": "https://github.com/jackgringo/skelly"
+}
