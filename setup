@@ -1,0 +1,14 @@
+#!/bin/bash
+
+npm install && bower install
+
+dir=${PWD##*/}
+tmux new-session -s $dir -n index -d "vim ."
+tmux send-keys -t $dir:index ':e public' C-m ':e public/index.html' C-m -d
+tmux new-window -t "$dir" -n css -d "vim public/styles"
+tmux send-keys -t "$dir":css ':e public/styles/screen.scss' C-m -d
+tmux split-window -t "$dir":css -v -p 20 "grunt watch:sass" -d
+tmux new-window -t "$dir" -n js -d "vim public/scripts"
+tmux send-keys -t "$dir":js ':e public/scripts/main.js' C-m -d
+tmux split-window -t "$dir":js -v -p 20 "grunt watch:js" -d
+tmux attach -t "$dir":index
