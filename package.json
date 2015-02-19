@@ -27,6 +27,7 @@
     "grunt-ssh": "^0.12.1"
   },
   "devDependencies": {
+    "grunt-browserify": "^3.3.0",
     "grunt-concurrent": "^1.0.0",
     "load-grunt-tasks": "^3.1.0"
   }

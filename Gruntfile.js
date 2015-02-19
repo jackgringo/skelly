@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['public/scripts/**/*.js'],
-        tasks: ['requirejs']
+        tasks: ['browserify']
       },
       sass: {
         files: ['public/styles/*.scss'],
